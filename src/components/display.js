@@ -1,4 +1,5 @@
 import React from 'react';
+import { strike, ball, foul, hit } from '../helpers/play.js';
 
 import Dashboard from './dashboard.js';
 
@@ -12,19 +13,23 @@ class Display extends React.Component {
   };
 
   strike = e => {
-
+    e.preventDefault();
+    this.setState(strike(this.state));
   }
 
   ball = e => {
-    
+    e.preventDefault();
+    this.setState(ball(this.state));
   }
 
   foul = e => {
-    
+    e.preventDefault();
+    this.setState(foul(this.state));
   }
 
   hit = e => {
-    
+    e.preventDefault();
+    this.setState(hit(this.state));
   }
 
   render() {
