@@ -38,4 +38,16 @@ describe('Display Component', () => {
 
     expect(ball).toHaveTextContent('1');
   });
+
+  it('Add strike count when foul button is clicked', () => {
+    const dashboard = render(<Dashboard />);
+    const foulBTN = dashboard.getByTestId('foulBTN');
+
+    fireEvent.click(foulBTN);
+
+    const display = render(<Display />);
+    const foul = display.getByTestId(/fouls/i);
+
+    expect(foul).toHaveTextContent('1');
+  });
 });
