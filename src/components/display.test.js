@@ -26,4 +26,16 @@ describe('Display Component', () => {
 
     expect(strike).toHaveTextContent('1');
   });
+
+  it('Add ball when clicked', () => {
+    const dashboard = render(<Dashboard />);
+    const ballBTN = dashboard.getByTestId('ballBTN');
+
+    fireEvent.click(ballBTN);
+
+    const display = render(<Display />);
+    const ball = display.getByTestId(/balls/i);
+
+    expect(ball).toHaveTextContent('1');
+  });
 });
