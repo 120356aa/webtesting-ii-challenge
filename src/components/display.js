@@ -11,6 +11,22 @@ class Display extends React.Component {
     outs: 0
   };
 
+  strike = e => {
+
+  }
+
+  ball = e => {
+    
+  }
+
+  foul = e => {
+    
+  }
+
+  hit = e => {
+    
+  }
+
   render() {
     return (
       <div>
@@ -19,7 +35,12 @@ class Display extends React.Component {
         <h3>Hits: {this.state.hits}</h3>
         <h3>Fouls: {this.state.fouls}</h3>
         <h3>Outs: {this.state.outs}</h3>
-        <Dashboard />
+        <Dashboard 
+          strike={this.strike}
+          ball={this.ball}
+          foul={this.foul}
+          hit={this.hit}
+        />
       </div>
     );
   }
