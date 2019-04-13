@@ -35,11 +35,11 @@ class Display extends React.Component {
   render() {
     return (
       <div>
-        <h3>Balls: {this.state.balls}</h3>
-        <h3>Strikes: {this.state.strikes}</h3>
-        <h3>Hits: {this.state.hits}</h3>
-        <h3>Fouls: {this.state.fouls}</h3>
-        <h3>Outs: {this.state.outs}</h3>
+        <h3 data-testid="balls">Balls: {this.state.balls}</h3>
+        <h3 data-testid="strikes">Strikes: {this.state.strikes}</h3>
+        <h3 data-testid="hits">Hits: {this.state.hits}</h3>
+        <h3 data-testid="fouls">Fouls: {this.state.fouls}</h3>
+        <h3 data-testid="outs">Outs: {this.state.outs}</h3>
         <Dashboard 
           strike={this.strike}
           ball={this.ball}

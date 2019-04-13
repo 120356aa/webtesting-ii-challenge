@@ -5,10 +5,10 @@ class Display extends React.Component {
   render() {
     return (
       <div>
-        <button>Strike</button>
-        <button>Ball</button>
-        <button>Foul</button>
-        <button>Hit</button>
+        <button onClick={this.props.strike}>Strike</button>
+        <button onClick={this.props.ball}>Ball</button>
+        <button onClick={this.props.foul}>Foul</button>
+        <button onClick={this.props.hit}>Hit</button>
       </div>
     );
   }
