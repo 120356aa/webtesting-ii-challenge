@@ -50,4 +50,18 @@ describe('Display Component', () => {
 
     expect(foul).toHaveTextContent('1');
   });
+
+  it('Reset strikes and balls when hit clicked', () => {
+    const dashboard = render(<Dashboard />);
+    const hitBTN = dashboard.getByTestId('hitBTN');
+
+    fireEvent.click(hitBTN);
+
+    const display = render(<Display />);
+    const balls = display.getByTestId(/balls/i);
+    const strikes = display.getByTestId(/strikes/i);
+
+    expect(balls).toHaveTextContent('0');
+    expect(strikes).toHaveTextContent('0');
+  });
 });
